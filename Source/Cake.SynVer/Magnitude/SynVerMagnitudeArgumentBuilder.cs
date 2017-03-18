@@ -4,14 +4,14 @@ using Cake.Core.IO;
 
 namespace  Cake.SynVer
 {
-    internal class SemVerMagnitudeArgumentBuilder: SemVerArgumentBuilder<SemVerMagnitudeSettings>
+    internal class SynVerMagnitudeArgumentBuilder: SynVerArgumentBuilder<SynVerMagnitudeSettings>
     {
         FilePath _new;
         FilePath _original;
         ICakeEnvironment _environment;
 
 
-        public SemVerMagnitudeArgumentBuilder(ICakeEnvironment environment, FilePath original, FilePath @new, SemVerMagnitudeSettings settings)
+        public SynVerMagnitudeArgumentBuilder(ICakeEnvironment environment, FilePath original, FilePath @new, SynVerMagnitudeSettings settings)
             :base(environment,settings)
         {
             _environment = environment;
@@ -20,7 +20,7 @@ namespace  Cake.SynVer
             if (@new == null) throw new ArgumentNullException(nameof(@new));
             _new = @new;
         }
-        protected override void AddArguments(ProcessArgumentBuilder builder, SemVerMagnitudeSettings settings)
+        protected override void AddArguments(ProcessArgumentBuilder builder, SynVerMagnitudeSettings settings)
         {
             builder.Append("--magnitude");
 

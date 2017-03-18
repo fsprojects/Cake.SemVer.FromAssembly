@@ -5,19 +5,19 @@ using Cake.Core.Tooling;
 
 namespace  Cake.SynVer
 {
-    internal class SemVerMagnitudeRunner : SemVerTool<SemVerMagnitudeSettings>
+    internal class SynVerMagnitudeRunner : SynVerTool<SynVerMagnitudeSettings>
     {
         private readonly ICakeEnvironment _environment;
 
-        public SemVerMagnitudeRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
+        public SynVerMagnitudeRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
             : base(fileSystem, environment, processRunner, tools)
         {
             _environment = environment;
         }
 
-        public Magnitude SemVerMagnitude(FilePath original, FilePath @new, SemVerMagnitudeSettings settings)
+        public Magnitude SemVerMagnitude(FilePath original, FilePath @new, SynVerMagnitudeSettings settings)
         {
-            var res = RunTool(settings, new SemVerMagnitudeArgumentBuilder(_environment, original, @new, settings));
+            var res = RunTool(settings, new SynVerMagnitudeArgumentBuilder(_environment, original, @new, settings));
             Magnitude magnitude;
             if (Enum.TryParse(res, out magnitude))
             {

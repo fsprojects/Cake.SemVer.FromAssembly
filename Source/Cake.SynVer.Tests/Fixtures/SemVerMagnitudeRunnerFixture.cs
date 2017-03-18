@@ -3,7 +3,7 @@ using Cake.Core.IO;
 
 namespace Cake.SynVer.Tests
 {
-    internal class SemVerMagnitudeRunnerFixture : SemVerFixture<SemVerMagnitudeSettings>
+    internal class SemVerMagnitudeRunnerFixture : SemVerFixture<SynVerMagnitudeSettings>
     {
         public FilePath Original;
 
@@ -16,7 +16,7 @@ namespace Cake.SynVer.Tests
         }
         protected override void RunTool()
         {
-            var tool = new SemVerMagnitudeRunner(FileSystem, Environment, ProcessRunner, Tools);
+            var tool = new SynVerMagnitudeRunner(FileSystem, Environment, ProcessRunner, Tools);
             tool.SemVerMagnitude(Original, New, Settings);
         }
     }

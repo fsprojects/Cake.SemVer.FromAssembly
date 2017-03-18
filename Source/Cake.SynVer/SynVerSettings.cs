@@ -3,7 +3,7 @@ using Cake.Core.Tooling;
 
 namespace  Cake.SynVer
 {
-    internal class SemVerSettings : ToolSettings
+    internal class SynVerSettings : ToolSettings
     {
         public FilePath Output { get; set; }
     }

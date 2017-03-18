@@ -5,7 +5,7 @@ using Xunit;
 
 namespace  Cake.SynVer.Tests
 {
-    public class SemVerMagnitudeRunnerTests
+    public class SynVerMagnitudeRunnerTests
     {
         [Fact]
         public void Should_Throw_If_Settings_Are_Null()

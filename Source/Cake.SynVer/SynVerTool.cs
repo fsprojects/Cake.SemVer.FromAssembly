@@ -8,10 +8,10 @@ using System.Globalization;
 
 namespace  Cake.SynVer
 {
-    internal class SemVerTool<TSettings> : Tool<TSettings>
-        where TSettings : SemVerSettings
+    internal class SynVerTool<TSettings> : Tool<TSettings>
+        where TSettings : SynVerSettings
     {
-        public SemVerTool(
+        public SynVerTool(
             IFileSystem fileSystem,
             ICakeEnvironment environment,
             IProcessRunner processRunner,
@@ -40,13 +40,13 @@ namespace  Cake.SynVer
         }
 
         /// <summary>
-        /// Runs the SemVer.FromAssembly tool with the specified settings.
+        /// Runs the SynVer tool with the specified settings.
         /// </summary>
-        /// <typeparam name="TBuilder">The Gem argument builder.</typeparam>
+        /// <typeparam name="TBuilder">The SynVer argument builder.</typeparam>
         /// <param name="settings">The settings.</param>
         /// <param name="builder">The builder.</param>
         protected string RunTool<TBuilder>(TSettings settings, TBuilder builder)
-            where TBuilder : SemVerArgumentBuilder<TSettings>
+            where TBuilder : SynVerArgumentBuilder<TSettings>
         {
             if (settings == null) throw new ArgumentNullException(nameof(settings));
             var args = builder.GetArguments();

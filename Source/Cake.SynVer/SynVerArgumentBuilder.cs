@@ -5,22 +5,22 @@ using Cake.Core.IO;
 namespace  Cake.SynVer
 {
     /// <summary>
-    /// The top level argument builder for the SemVer.FromAssembly CLI Tool
+    /// The top level argument builder for the SynVer CLI Tool
     /// </summary>
     /// <typeparam name="T">The Settings type to build arguments from</typeparam>
-    internal abstract class SemVerArgumentBuilder<T>
-        where T : SemVerSettings
+    internal abstract class SynVerArgumentBuilder<T>
+        where T : SynVerSettings
     {
         private readonly ICakeEnvironment _environment;
         private readonly ProcessArgumentBuilder _builder;
         private readonly T _settings;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SemVerArgumentBuilder{T}"/> class.
+        /// Initializes a new instance of the <see cref="SynVerArgumentBuilder{T}"/> class.
         /// </summary>
         /// <param name="environment">The environment.</param>
         /// <param name="setting">The settings</param>
-        protected SemVerArgumentBuilder(ICakeEnvironment environment, T setting)
+        protected SynVerArgumentBuilder(ICakeEnvironment environment, T setting)
         {
             _environment = environment;
             _settings = setting;

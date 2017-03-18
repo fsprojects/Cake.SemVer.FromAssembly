@@ -40,14 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Files.cs" />
-    <Compile Include="SemVerAliases.cs" />
+    <Compile Include="SynVerAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemVerArgumentBuilder.cs" />
-    <Compile Include="SemVerSettings.cs" />
-    <Compile Include="SemVerTool.cs" />
-    <Compile Include="Magnitude\SemVerMagnitudeRunner.cs" />
-    <Compile Include="Magnitude\SemVerMagnitudeArgumentBuilder.cs" />
-    <Compile Include="Magnitude\SemVerMagnitudeSettings.cs" />
+    <Compile Include="SynVerArgumentBuilder.cs" />
+    <Compile Include="SynVerSettings.cs" />
+    <Compile Include="SynVerTool.cs" />
+    <Compile Include="Magnitude\SynVerMagnitudeRunner.cs" />
+    <Compile Include="Magnitude\SynVerMagnitudeArgumentBuilder.cs" />
+    <Compile Include="Magnitude\SynVerMagnitudeSettings.cs" />
     <Compile Include="Magnitude\Magnitude.cs" />
   </ItemGroup>
   <ItemGroup>

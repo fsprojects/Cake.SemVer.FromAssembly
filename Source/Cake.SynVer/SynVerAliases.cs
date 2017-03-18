@@ -6,21 +6,21 @@ using System.Runtime.InteropServices;
 namespace Cake.SynVer
 {
     /// <summary>
-    /// <para>Contains functionality related to the <see href="https://github.com/wallymathieu/SemVer.FromAssembly">SemVer.FromAssembly</see>.</para>
+    /// <para>Contains functionality related to the <see href="https://github.com/fsprojects/SyntacticVersioning">SyntacticVersioning</see>.</para>
     /// <para>
-    /// In order to use the commands for this addin, the SemVer.FromAssembly utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+    /// In order to use the commands for this addin you will need to include the following in your build.cake file to download and
     /// reference the addin from NuGet.org:
     /// <code>
-    /// #addin Cake.SemVer.FromAssembly
+    /// #addin Cake.SynVer
     /// </code>
     /// </para>
     /// </summary>
-    [CakeAliasCategory("SemVer")]
+    [CakeAliasCategory("SynVer")]
     [ComVisible(true)]
-    public static class SemVerAliases
+    public static class SynVerAliases
     {
         /// <summary>
-        /// Get the magnitude by running SemVer.FromAssembly.
+        /// Get the magnitude by running SynVer.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="original">the previously published dll</param>
@@ -36,7 +36,7 @@ namespace Cake.SynVer
             return SemVerMagnitude(context, original, next, null);
         }
         /// <summary>
-        /// Get the magnitude by running SemVer.FromAssembly.
+        /// Get the magnitude by running SynVer.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="original">the previously published dll</param>
@@ -50,8 +50,8 @@ namespace Cake.SynVer
         [CakeMethodAlias]
         public static Magnitude SemVerMagnitude(this ICakeContext context, FilePath original, FilePath next, FilePath output)
         {
-            var runner = new SemVerMagnitudeRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
-            return runner.SemVerMagnitude(original, next, new SemVerMagnitudeSettings { Output = output });
+            var runner = new SynVerMagnitudeRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
+            return runner.SemVerMagnitude(original, next, new SynVerMagnitudeSettings { Output = output });
         }
     }
 }
