@@ -1,5 +1,5 @@
 var rootDirectoryPath         = MakeAbsolute(Context.Environment.WorkingDirectory);
-var solutionFilePath          = "./Source/Cake.SemVer.FromAssembly.sln";
+var solutionFilePath          = "./Source/Cake.SynVer.sln";
 
 #tool nuget:?package=xunit.runner.console
 
@@ -50,35 +50,32 @@ Task("Package")
     .Does(() =>
 {
     var nuGetPackSettings   = new NuGetPackSettings {
-        Id                      = "Cake.SemVer.FromBinary",
-        Version                 = "0.0.4",
-        Title                   = "Cake addin to use SemVer.FromAssembly",
-        Authors                 = new[] {"Oskar Gewalli"},
-        Owners                  = new[] {"Oskar Gewalli"},
-        Description             = "Cake addin in order to be able to get next semver version of nuget package based on changes to the public API",
-        ProjectUrl              = new Uri("https://github.com/wallymathieu/Cake.SemVer.FromAssembly"),
-        LicenseUrl              = new Uri("https://raw.githubusercontent.com/wallymathieu/Cake.SemVer.FromAssembly/master/LICENSE"),
-        Copyright               = "wallymathieu 2016",
-        ReleaseNotes            = new string[]{"Should reference SemVer.FromAssembly"},
-        Tags                    = new [] {"semver", "Cake"},
+        Id                      = "Cake.SynVer",
+        Version                 = "0.0.1",
+        Title                   = "Cake addin to use SynVer",
+        Authors                 = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
+        Owners                  = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
+        Description             = "Cake addin in order to be able to get next syntactic (semantic) version of nuget package based on changes to the public API",
+        ProjectUrl              = new Uri("https://github.com/fsprojects/Cake.SynVer"),
+        LicenseUrl              = new Uri("https://raw.githubusercontent.com/fsprojects/Cake.SynVer/master/LICENSE"),
+        Copyright               = "fsprojects 2017",
+        ReleaseNotes            = new string[]{"Initial release"},
+        Tags                    = new [] {"semver", "synver", "Cake", "syntactic-versioning", "semantic-versioning"},
         RequireLicenseAcceptance= false,
         Symbols                 = true,
         NoPackageAnalysis       = true,
         Files                   = new [] {
-            new NuSpecContent {Source = "Cake.SemVer.FromBinary.dll", Target = "/"},
-            new NuSpecContent {Source = "Cake.SemVer.FromBinary.XML", Target = "/"},
+            new NuSpecContent {Source = "Cake.SynVer.dll", Target = "/"},
+            new NuSpecContent {Source = "Cake.SynVer.XML", Target = "/"},
         },
         Dependencies            = new List<NuSpecDependency>
         { 
             new NuSpecDependency { Id= "SynVer", Version="0.0.6"} 
         },
-        BasePath                = "./Source/Cake.SemVer.FromAssembly/bin/" + configuration,
+        BasePath                = "./Source/Cake.SynVer/bin/" + configuration,
         OutputDirectory         = "./BuildArtifacts/nuget"
     };
 
-    NuGetPack(nuGetPackSettings);
-    nuGetPackSettings.Id = "Cake.SemVer.FromAssembly";
-    nuGetPackSettings.Version = "0.0.5";
     NuGetPack(nuGetPackSettings);
 });
 

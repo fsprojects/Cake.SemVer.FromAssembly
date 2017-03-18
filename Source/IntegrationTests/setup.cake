@@ -1,5 +1,5 @@
 var target = Argument("target", "Default");
-#addin nuget:?package=Cake.SemVer.FromBinary
+#addin nuget:?package=Cake.SynVer
 
 Task("Default")
     .Does(() =>
