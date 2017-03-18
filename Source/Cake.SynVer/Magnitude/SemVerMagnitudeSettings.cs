@@ -1,5 +1,5 @@
 ﻿using System;
-namespace  Cake.SemVer.FromBinary
+namespace  Cake.SynVer
 {
     internal sealed class SemVerMagnitudeSettings:SemVerSettings
     {

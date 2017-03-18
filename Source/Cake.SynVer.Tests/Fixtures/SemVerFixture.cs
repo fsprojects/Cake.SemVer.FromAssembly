@@ -2,7 +2,7 @@
 using Cake.Core.Tooling;
 using Cake.Testing.Fixtures;
 
-namespace  Cake.SemVer.FromBinary.Tests
+namespace  Cake.SynVer.Tests
 {
     internal abstract class SemVerFixture<TSettings>:ToolFixture<TSettings>
                       where TSettings : ToolSettings, new()

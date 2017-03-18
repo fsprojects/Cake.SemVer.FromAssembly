@@ -3,7 +3,7 @@ using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
 using System.Runtime.InteropServices;
-namespace Cake.SemVer.FromBinary
+namespace Cake.SynVer
 {
     /// <summary>
     /// <para>Contains functionality related to the <see href="https://github.com/wallymathieu/SemVer.FromAssembly">SemVer.FromAssembly</see>.</para>

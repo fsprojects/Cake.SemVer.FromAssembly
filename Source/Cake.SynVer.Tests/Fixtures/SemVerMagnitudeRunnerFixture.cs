@@ -1,7 +1,7 @@
 ﻿using System;
 using Cake.Core.IO;
 
-namespace Cake.SemVer.FromBinary.Tests
+namespace Cake.SynVer.Tests
 {
     internal class SemVerMagnitudeRunnerFixture : SemVerFixture<SemVerMagnitudeSettings>
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace  Cake.SemVer.FromBinary
+namespace  Cake.SynVer
 {
     [ComVisible(true)]
     public enum Magnitude

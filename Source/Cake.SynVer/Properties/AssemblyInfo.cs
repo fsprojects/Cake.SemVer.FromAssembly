@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("Cake.SemVer.FromBinary")]
+[assembly: AssemblyTitle("Cake.SynVer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -27,4 +27,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-[assembly: InternalsVisibleTo("Cake.SemVer.FromAssembly.Tests")]
+[assembly: InternalsVisibleTo("Cake.SynVer.Tests")]

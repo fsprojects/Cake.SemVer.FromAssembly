@@ -2,7 +2,7 @@
 using Cake.Core;
 using Cake.Core.IO;
 
-namespace  Cake.SemVer.FromBinary
+namespace  Cake.SynVer
 {
     internal class SemVerMagnitudeArgumentBuilder: SemVerArgumentBuilder<SemVerMagnitudeSettings>
     {

@@ -1,7 +1,7 @@
 ﻿using Cake.Core.IO;
 using SysPath = System.IO.Path;
 
-namespace Cake.SemVer.FromBinary
+namespace Cake.SynVer
 {
     internal static class Files
     {

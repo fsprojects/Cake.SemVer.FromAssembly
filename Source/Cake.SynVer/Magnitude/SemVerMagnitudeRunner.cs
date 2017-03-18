@@ -3,7 +3,7 @@ using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 
-namespace  Cake.SemVer.FromBinary
+namespace  Cake.SynVer
 {
     internal class SemVerMagnitudeRunner : SemVerTool<SemVerMagnitudeSettings>
     {

@@ -2,7 +2,7 @@
 using Cake.Core;
 using Cake.Core.IO;
 
-namespace  Cake.SemVer.FromBinary
+namespace  Cake.SynVer
 {
     /// <summary>
     /// The top level argument builder for the SemVer.FromAssembly CLI Tool
