@@ -51,7 +51,7 @@ Task("Package")
 {
     var nuGetPackSettings   = new NuGetPackSettings {
         Id                      = "Cake.SynVer",
-        Version                 = "0.0.1",
+        Version                 = "0.0.2",
         Title                   = "Cake addin to use SynVer",
         Authors                 = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
         Owners                  = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
