@@ -51,13 +51,14 @@ Task("Package")
 {
     var nuGetPackSettings   = new NuGetPackSettings {
         Id                      = "Cake.SynVer",
-        Version                 = "0.0.1",
+        Version                 = "0.0.2",
         Title                   = "Cake addin to use SynVer",
-        Authors                 = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
-        Owners                  = new[] {"Oskar Gewalli", "SPISE MISU ApS (Ramón Soto Mathiesen)"},
+        Authors                 = new[] {"Oskar Gewalli", "SPISE MISU ApS (RamÃ³n Soto Mathiesen)"},
+        Owners                  = new[] {"Oskar Gewalli", "SPISE MISU ApS (RamÃ³n Soto Mathiesen)"},
         Description             = "Cake addin in order to be able to get next syntactic (semantic) version of nuget package based on changes to the public API",
         ProjectUrl              = new Uri("https://github.com/fsprojects/Cake.SynVer"),
         LicenseUrl              = new Uri("https://raw.githubusercontent.com/fsprojects/Cake.SynVer/master/LICENSE"),
+        IconUrl                 = new Uri("https://raw.githubusercontent.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png"),
         Copyright               = "fsprojects 2017",
         ReleaseNotes            = new string[]{"Initial release"},
         Tags                    = new [] {"semver", "synver", "Cake", "syntactic-versioning", "semantic-versioning"},
